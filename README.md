@@ -3,4 +3,4 @@
 
 Screenshots
 -----------
-<img width="240" src="https://github.com/znoeyes/ExternalFactors/issues/1#issue-625831704">
+<img width="240" src="https://user-images.githubusercontent.com/48233529/83044821-ab182b00-a07f-11ea-8b68-40a17e6e8c5e.PNG">
