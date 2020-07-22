@@ -160,7 +160,7 @@ class MainActivity : AppCompatActivity() {
                 val sys = jsonObj.getJSONObject("sys")
 
                 val updatedAt:Long = jsonObj.getLong("dt")
-                val updatedAtText = "Updated at: "+ SimpleDateFormat("yyyy-MM-dd hh:mm a", Locale.KOREA).format(Date(updatedAt*1000))
+                val updatedAtText = "Updated at: "+ SimpleDateFormat("yyyy-MM-dd hh:mm a", Locale.KOREA).format(Date(updatedAt*1000))//.format(Date(updatedAt*1000))
                 val weatherDescription = weather.getString("description")
                 val temp = main.getString("temp")+"°C"
                 val address = jsonObj.getString("name")+", "+sys.getString("country")
