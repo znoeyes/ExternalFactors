@@ -19,6 +19,11 @@
         android:text="동영상 시작" />
 
     <TextView
+        android:id="@+id/blank"
+        android:layout_width="match_parent"
+        android:layout_height="178dp" />
+
+    <TextView
         android:id="@+id/textView"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"

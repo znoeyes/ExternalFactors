@@ -9,6 +9,40 @@
     tools:context=".MainActivity">
 
     <TextView
+        android:id="@+id/textView_today"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="오늘은"
+        android:textAppearance="@style/TextAppearance.AppCompat.Large"
+        android:textSize="36sp" />
+
+    <TextView
+        android:id="@+id/status"
+        android:layout_width="105dp"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:text="weather description"
+        android:textAlignment="center"
+        android:textSize="18dp" />
+
+    <TextView
+        android:id="@+id/temp"
+        android:layout_width="170dp"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:fontFamily="sans-serif-thin"
+        android:text="0°C"
+        android:textAlignment="center"
+        android:textSize="30sp" />
+
+    <TextView
+        android:id="@+id/updated_at"
+        android:layout_width="309dp"
+        android:layout_height="wrap_content"
+        android:text="2020-MAY-00, 20:08 PM"
+        android:textSize="14dp" />
+
+    <TextView
         android:id="@+id/latTextView"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
@@ -35,30 +69,9 @@
         android:text="CITY, COUNTRY"
         android:textSize="24dp" />
 
-    <TextView
-        android:id="@+id/updated_at"
-        android:layout_width="309dp"
-        android:layout_height="wrap_content"
-        android:text="2020-MAY-00, 20:08 PM"
-        android:textSize="14dp" />
-
-    <TextView
-        android:id="@+id/status"
-        android:layout_width="105dp"
-        android:layout_height="wrap_content"
-        android:layout_gravity="center"
-        android:text="weather description"
-        android:textAlignment="center"
-        android:textSize="18dp" />
-
-    <TextView
-        android:id="@+id/temp"
-        android:layout_width="170dp"
-        android:layout_height="wrap_content"
-        android:layout_gravity="center"
-        android:fontFamily="sans-serif-thin"
-        android:text="0°C"
-        android:textAlignment="center"
-        android:textSize="30sp" />
+    <ListView
+        android:id="@+id/listView"
+        android:layout_width="match_parent"
+        android:layout_height="189dp" />
 
 </LinearLayout>
