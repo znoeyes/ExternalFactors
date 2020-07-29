@@ -42,4 +42,9 @@
         android:layout_height="wrap_content"
         android:text="Bad" />
 
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="30dp"
+        android:src="@drawable/icon_bake" />
+
 </LinearLayout>
