@@ -24,7 +24,7 @@ public class PlayMusicActivity extends YouTubeBaseActivity {
 
         initPlayer();
 
-        Button button = findViewById(R.id.button);
+        Button button = findViewById(R.id.button_play);
         button.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
