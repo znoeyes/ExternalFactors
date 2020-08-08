@@ -41,15 +41,15 @@ class HomeActivity : AppCompatActivity() {
         //날씨, 시간
         weatherTask().execute()
 
-//        imageButton_home.setOnClickListener{
-//            startActivity<HomeActivity>()
-//        }
-//        imageButton_popup.setOnClickListener {
-//            startActivity<EmotionPopUpActivity>()
-//        }
-//        imageButton_mystudio.setOnClickListener {
-////            startActivity<UserFeedActivity>()
-//        }
+        button_home.setOnClickListener{
+            startActivity<HomeActivity>()
+        }
+        button_popup.setOnClickListener {
+            startActivity<EmotionPopUpActivity>()
+        }
+        button_mystudio.setOnClickListener {
+//            startActivity<UserFeedActivity>()
+        }
     }
 
     //마지막으로 알려진 위치 가져오기
