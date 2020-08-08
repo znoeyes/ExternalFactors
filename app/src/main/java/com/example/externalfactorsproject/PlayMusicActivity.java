@@ -4,6 +4,7 @@ import android.os.Bundle;
 import android.util.Log;
 import android.view.View;
 import android.widget.Button;
+import android.widget.ImageView;
 
 import com.google.android.youtube.player.YouTubeBaseActivity;
 import com.google.android.youtube.player.YouTubeInitializationResult;
@@ -20,17 +21,19 @@ public class PlayMusicActivity extends YouTubeBaseActivity {
     @Override
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_07_play_music);
+        setContentView(R.layout.activity_play_music_video);
 
         initPlayer();
 
-        Button button = findViewById(R.id.button_play);
-        button.setOnClickListener(new View.OnClickListener() {
+        Button button_play = findViewById(R.id.button_play);
+        button_play.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 playVideo();
             }
         });
+
+        ImageView button_back = findViewById(R.id.imageView_back); //누르면 노래 재생 화면
     }
 
     public void initPlayer(){

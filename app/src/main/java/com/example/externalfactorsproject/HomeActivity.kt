@@ -11,19 +11,19 @@ import android.os.AsyncTask
 import android.os.Bundle
 import android.os.Looper
 import android.provider.Settings
-import android.view.View
-import android.widget.ProgressBar
 import android.widget.TextView
 import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
 import androidx.core.app.ActivityCompat
 import com.google.android.gms.location.*
+import kotlinx.android.synthetic.main.activity_home.*
+import org.jetbrains.anko.startActivity
 import org.json.JSONObject
 import java.net.URL
 import java.text.SimpleDateFormat
 import java.util.*
 
-class MainActivity : AppCompatActivity() {
+class HomeActivity : AppCompatActivity() {
     private lateinit var fusedLocationProviderClient: FusedLocationProviderClient
     private val PERMISSION_ID = 1000
     private lateinit var LAT: String
@@ -33,14 +33,23 @@ class MainActivity : AppCompatActivity() {
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setContentView(R.layout.activity_main)
+        setContentView(R.layout.activity_home)
 
         //위치
         fusedLocationProviderClient = LocationServices.getFusedLocationProviderClient(this)
         getLastLocation()
-
         //날씨, 시간
         weatherTask().execute()
+
+//        imageButton_home.setOnClickListener{
+//            startActivity<HomeActivity>()
+//        }
+//        imageButton_popup.setOnClickListener {
+//            startActivity<EmotionPopUpActivity>()
+//        }
+//        imageButton_mystudio.setOnClickListener {
+////            startActivity<UserFeedActivity>()
+//        }
     }
 
     //마지막으로 알려진 위치 가져오기
@@ -53,9 +62,9 @@ class MainActivity : AppCompatActivity() {
                     if(location == null){
                         requestNewLocationData() //실행 중 권한 요청 코드 적용
                     } else { //모든 권한이 승인됐을 때, 출력 코드
-                        findViewById<TextView>(R.id.latTextView).text = location.latitude.toString()
-                        findViewById<TextView>(R.id.lonTextView).text = location.longitude.toString()
-                        LAT = location.latitude.toString() //intent
+//                        findViewById<TextView>(R.id.latTextView).text = location.latitude.toString()
+//                        findViewById<TextView>(R.id.lonTextView).text = location.longitude.toString()
+                        LAT = location.latitude.toString()
                         LON = location.longitude.toString()
                     }
                 }
@@ -120,8 +129,10 @@ class MainActivity : AppCompatActivity() {
     private val locationCallback = object : LocationCallback(){
         override fun onLocationResult(locationResult: LocationResult) {
             var lastLocation: Location = locationResult.lastLocation
-            findViewById<TextView>(R.id.latTextView).text = lastLocation.latitude.toString()
-            findViewById<TextView>(R.id.lonTextView).text = lastLocation.longitude.toString()
+//            findViewById<TextView>(R.id.latTextView).text = lastLocation.latitude.toString()
+//            findViewById<TextView>(R.id.lonTextView).text = lastLocation.longitude.toString()
+            LAT = lastLocation.latitude.toString()
+            LON = lastLocation.longitude.toString()
         }
     }
 
@@ -130,13 +141,14 @@ class MainActivity : AppCompatActivity() {
     inner class weatherTask() : AsyncTask<String, Void, String>() {
 
         //스레드가 시작하기 전에 수행할 작업(메인 스레드)
-        override fun onPreExecute() {
-            super.onPreExecute()
-            /* Showing the ProgressBar, Making the main design GONE */
-            findViewById<ProgressBar>(R.id.loader).visibility = View.VISIBLE
+//        override fun onPreExecute() {
+//            super.onPreExecute()
+//            /* Showing the ProgressBar, Making the main design GONE */
+//            findViewById<ProgressBar>(R.id.loader).visibility = View.VISIBLE
 //            findViewById<RelativeLayout>(R.id.mainContainer).visibility = View.GONE
 //            findViewById<TextView>(R.id.errorText).visibility = View.GONE
-        }
+//        }
+
         //스레드가 수행할 작업(생성된 스레드)
         override fun doInBackground(vararg params: String?): String? {
             var response:String?
@@ -167,18 +179,16 @@ class MainActivity : AppCompatActivity() {
 
 
                 /* Populating extracted data into our views */
-                findViewById<TextView>(R.id.updated_at).text =  updatedAtText
                 findViewById<TextView>(R.id.status).text = weatherDescription.capitalize()
                 findViewById<TextView>(R.id.temp).text = temp
-                findViewById<TextView>(R.id.address).text = address
+//                findViewById<TextView>(R.id.updated_at).text =  updatedAtText
+//                findViewById<TextView>(R.id.address).text = address
 
                 /* Views populated, Hiding the loader, Showing the main design */
-                findViewById<ProgressBar>(R.id.loader).visibility = View.GONE
-//                findViewById<RelativeLayout>(R.id.mainContainer).visibility = View.VISIBLE
+//                findViewById<ProgressBar>(R.id.loader).visibility = View.GONE
 
             } catch (e: Exception) {
-                findViewById<ProgressBar>(R.id.loader).visibility = View.GONE
-//                findViewById<TextView>(R.id.errorText).visibility = View.VISIBLE
+//                findViewById<ProgressBar>(R.id.loader).visibility = View.GONE
             }
         }
     }

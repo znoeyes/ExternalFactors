@@ -1,0 +1,201 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <TextView
+        android:id="@+id/textView2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="155dp"
+        android:text="오늘 당신의 기분은 어떤가요?"
+        app:layout_constraintEnd_toStartOf="@+id/imageView_fork2"
+        app:layout_constraintStart_toEndOf="@+id/imageView_fork"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <ImageView
+        android:id="@+id/imageView_BAKE"
+        android:layout_width="379dp"
+        android:layout_height="57dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginEnd="16dp"
+        android:layout_marginBottom="16dp"
+        android:src="@drawable/icon_bake"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <ImageButton
+        android:id="@+id/imageButton_happy"
+        android:layout_width="70dp"
+        android:layout_height="70dp"
+        android:layout_marginStart="80dp"
+        android:layout_marginTop="28dp"
+        android:layout_marginEnd="20dp"
+        android:background="#FFFFFF"
+        android:scaleType="fitCenter"
+        app:layout_constraintEnd_toStartOf="@+id/imageButton_flutter"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/imageView_fork"
+        app:srcCompat="@drawable/icon_happy" />
+
+    <ImageButton
+        android:id="@+id/imageButton_soso"
+        android:layout_width="70dp"
+        android:layout_height="70dp"
+        android:layout_marginTop="28dp"
+        android:layout_marginEnd="80dp"
+        android:background="#FFFFFF"
+        android:scaleType="fitCenter"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/imageView_fork2"
+        app:srcCompat="@drawable/icon_soso" />
+
+    <ImageView
+        android:id="@+id/imageView_soso"
+        android:layout_width="70dp"
+        android:layout_height="30dp"
+        android:layout_marginEnd="80dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/imageButton_soso"
+        app:srcCompat="@drawable/text_soso" />
+
+    <ImageView
+        android:id="@+id/imageView_angry"
+        android:layout_width="70dp"
+        android:layout_height="30dp"
+        android:layout_marginEnd="80dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/imageButton_angry"
+        app:srcCompat="@drawable/text_angry" />
+
+    <ImageButton
+        android:id="@+id/imageButton_angry"
+        android:layout_width="70dp"
+        android:layout_height="70dp"
+        android:layout_marginTop="26dp"
+        android:layout_marginEnd="80dp"
+        android:background="#FFFFFF"
+        android:scaleType="fitCenter"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/imageView_soso"
+        app:srcCompat="@drawable/icon_angry" />
+
+    <ImageView
+        android:id="@+id/imageView_happy"
+        android:layout_width="70dp"
+        android:layout_height="20dp"
+        android:layout_marginStart="80dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/imageButton_happy"
+        app:srcCompat="@drawable/text_happy" />
+
+    <ImageButton
+        android:id="@+id/imageButton_flutter"
+        android:layout_width="70dp"
+        android:layout_height="70dp"
+        android:layout_marginTop="66dp"
+        android:layout_marginEnd="20dp"
+        android:background="#FFFFFF"
+        android:scaleType="fitCenter"
+        app:layout_constraintEnd_toStartOf="@+id/imageButton_soso"
+        app:layout_constraintTop_toBottomOf="@+id/textView2"
+        app:srcCompat="@drawable/icon_flutter" />
+
+    <ImageView
+        android:id="@+id/imageView_flutter"
+        android:layout_width="70dp"
+        android:layout_height="30dp"
+        android:layout_marginStart="20dp"
+        android:layout_marginEnd="20dp"
+        app:layout_constraintEnd_toStartOf="@+id/imageView_soso"
+        app:layout_constraintStart_toEndOf="@+id/imageView_happy"
+        app:layout_constraintTop_toBottomOf="@+id/imageButton_flutter"
+        app:srcCompat="@drawable/text_flutter" />
+
+    <ImageView
+        android:id="@+id/imageView_fun"
+        android:layout_width="70dp"
+        android:layout_height="30dp"
+        android:layout_marginStart="20dp"
+        android:layout_marginEnd="20dp"
+        app:layout_constraintEnd_toStartOf="@+id/imageView_angry"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toEndOf="@+id/imageView_sad"
+        app:layout_constraintTop_toBottomOf="@+id/imageButton_fun"
+        app:srcCompat="@drawable/text_fun" />
+
+    <ImageButton
+        android:id="@+id/imageButton_fun"
+        android:layout_width="70dp"
+        android:layout_height="70dp"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="26dp"
+        android:layout_marginEnd="20dp"
+        android:background="#FFFFFF"
+        android:scaleType="fitCenter"
+        app:layout_constraintEnd_toStartOf="@+id/imageButton_angry"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toEndOf="@+id/imageButton_sad"
+        app:layout_constraintTop_toBottomOf="@+id/imageView_flutter"
+        app:srcCompat="@drawable/icon_fun" />
+
+    <ImageView
+        android:id="@+id/imageView_sad"
+        android:layout_width="70dp"
+        android:layout_height="30dp"
+        android:layout_marginStart="80dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/imageButton_sad"
+        app:srcCompat="@drawable/text_sad" />
+
+    <ImageButton
+        android:id="@+id/imageButton_sad"
+        android:layout_width="70dp"
+        android:layout_height="70dp"
+        android:layout_marginStart="80dp"
+        android:layout_marginTop="36dp"
+        android:background="#FFFFFF"
+        android:scaleType="fitCenter"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/imageView_happy"
+        app:srcCompat="@drawable/icon_sad" />
+
+    <ImageView
+        android:id="@+id/imageView_fork"
+        android:layout_width="37dp"
+        android:layout_height="93dp"
+        android:layout_marginStart="80dp"
+        android:layout_marginTop="120dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/icon_fork" />
+
+    <ImageView
+        android:id="@+id/imageView_fork2"
+        android:layout_width="37dp"
+        android:layout_height="93dp"
+        android:layout_marginTop="120dp"
+        android:layout_marginEnd="80dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/icon_fork" />
+
+    <TextView
+        android:id="@+id/button_close"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="32dp"
+        android:layout_marginEnd="16dp"
+        android:layout_marginBottom="140dp"
+        android:text="닫기"
+        app:layout_constraintBottom_toTopOf="@+id/imageView_BAKE"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/imageView_fun" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
