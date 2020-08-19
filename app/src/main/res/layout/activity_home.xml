@@ -7,17 +7,15 @@
     android:background="@android:color/white"
     tools:context=".HomeActivity">
 
-    <TextView
-        android:id="@+id/textView_today"
+    <ImageView
+        android:id="@+id/imageView_NOW"
         android:layout_width="100dp"
         android:layout_height="50dp"
         android:layout_marginStart="16dp"
         android:layout_marginTop="16dp"
-        android:text="오늘은"
-        android:textAppearance="@style/TextAppearance.AppCompat.Large"
-        android:textSize="36sp"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/text_now" />
 
     <TextView
         android:id="@+id/status"
@@ -43,7 +41,7 @@
         android:text="0°C"
         android:textAlignment="center"
         android:textSize="24sp"
-        app:layout_constraintStart_toEndOf="@+id/textView_today"
+        app:layout_constraintStart_toEndOf="@+id/imageView_NOW"
         app:layout_constraintTop_toTopOf="parent" />
 
     <ListView
