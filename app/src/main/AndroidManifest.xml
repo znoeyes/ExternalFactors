@@ -14,11 +14,13 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".PlayMusicActivity"></activity>
-        <activity android:name=".EmotionPopUpActivity"></activity>
+        <activity android:name=".PlayMusicVideoActivity"></activity>
+        <activity android:name=".EmotionPopUpActivity"
+            android:theme="@style/AppTheme.Dialog"></activity>
         <activity android:name=".CameraActivity"
             android:hardwareAccelerated="true" />
         <activity android:name=".HeartRatePopUpActivity"
+            android:theme="@style/AppTheme.Dialog"
             android:hardwareAccelerated="true" />
         <activity android:name=".HomeActivity">
             <intent-filter>

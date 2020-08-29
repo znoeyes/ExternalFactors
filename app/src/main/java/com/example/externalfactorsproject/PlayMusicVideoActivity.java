@@ -13,11 +13,11 @@ import com.google.android.youtube.player.YouTubeInitializationResult;
 import com.google.android.youtube.player.YouTubePlayer;
 import com.google.android.youtube.player.YouTubePlayerView;
 
-public class PlayMusicActivity extends YouTubeBaseActivity {
+public class PlayMusicVideoActivity extends YouTubeBaseActivity {
     YouTubePlayerView playerView;
     YouTubePlayer player;
 
-    private static String API_KEY = "AIzaSyB3lgEALNYeCJqKz-SuOBmBfI3mhQ2yLtI";
+    private static String API_KEY = "AIzaSyCnJH9Elr_UWHRSCnUvIHbT7OOzM7Ew4k0";
     private static String videoId = "f2Pee5hnO-E";
 
     @Override
@@ -53,8 +53,16 @@ public class PlayMusicActivity extends YouTubeBaseActivity {
             }
         });
 
-        //누르면 노래 재생 화면 추가시키기
+        //누르면 ViewMorePopup 연결시키기
         ImageView button_back = findViewById(R.id.imageView_back);
+//        button_back.setOnClickListener(new View.OnClickListener() {
+//            @Override
+//            public void onClick(View v) {
+//                Intent intent = new Intent(getApplicationContext(), ViewMorePopup.class);
+//                startActivityForResult(intent,0);
+//                finish();
+//            }
+//        });
     }
 
     public void initPlayer(){

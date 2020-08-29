@@ -41,11 +41,21 @@
             app:srcCompat="@drawable/text_measure" />
     </androidx.constraintlayout.widget.ConstraintLayout>
 
+    <TextView
+        android:id="@+id/textView_measure_heart_rate"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="51dp"
+        android:text="심박수를 재볼까요?"
+        app:layout_constraintEnd_toStartOf="@+id/imageView_fork2"
+        app:layout_constraintStart_toEndOf="@+id/imageView_fork"
+        app:layout_constraintTop_toTopOf="parent" />
+
     <ImageView
         android:id="@+id/imageView_fork"
         android:layout_width="37dp"
         android:layout_height="93dp"
-        android:layout_marginStart="80dp"
+        android:layout_marginStart="26dp"
         android:layout_marginTop="16dp"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
@@ -56,20 +66,10 @@
         android:layout_width="37dp"
         android:layout_height="93dp"
         android:layout_marginTop="16dp"
-        android:layout_marginEnd="80dp"
+        android:layout_marginEnd="26dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:srcCompat="@drawable/icon_fork" />
-
-    <TextView
-        android:id="@+id/textView_measure_heart_rate"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="51dp"
-        android:text="심박수를 재볼까요?"
-        app:layout_constraintEnd_toStartOf="@+id/imageView_fork2"
-        app:layout_constraintStart_toEndOf="@+id/imageView_fork"
-        app:layout_constraintTop_toTopOf="parent" />
 
     <TextView
         android:id="@+id/button_pass"

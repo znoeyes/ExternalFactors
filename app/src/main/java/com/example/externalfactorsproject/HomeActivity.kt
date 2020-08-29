@@ -11,6 +11,7 @@ import android.os.AsyncTask
 import android.os.Bundle
 import android.os.Looper
 import android.provider.Settings
+import android.view.animation.AnimationUtils
 import android.widget.TextView
 import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
@@ -40,6 +41,8 @@ class HomeActivity : AppCompatActivity() {
         getLastLocation()
         //날씨, 시간
         weatherTask().execute()
+        //NOW 이미지뷰 투명도 애니메이션
+        animateNOW()
 
         imageButton_home.setOnClickListener{
             startActivity<HomeActivity>()
@@ -191,6 +194,12 @@ class HomeActivity : AppCompatActivity() {
 //                findViewById<ProgressBar>(R.id.loader).visibility = View.GONE
             }
         }
+    }
+
+    //NOW 이미지뷰 투명도 애니메이션
+    private fun animateNOW(){
+        val alphaNOW = AnimationUtils.loadAnimation(this, R.anim.now_animation)
+        imageView_NOW.animation = alphaNOW
     }
 
 }
