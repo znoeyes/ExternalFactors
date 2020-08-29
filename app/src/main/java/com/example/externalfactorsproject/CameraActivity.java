@@ -22,12 +22,10 @@ import android.view.Surface;
 import android.view.TextureView;
 import android.widget.TextView;
 import android.widget.Toast;
-
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.core.app.ActivityCompat;
-
 import java.util.Arrays;
 
 public class CameraActivity extends AppCompatActivity {

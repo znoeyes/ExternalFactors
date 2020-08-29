@@ -1,9 +1,11 @@
 package com.example.externalfactorsproject;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.View;
 import android.widget.Button;
+import android.widget.ImageButton;
 import android.widget.ImageView;
 
 import com.google.android.youtube.player.YouTubeBaseActivity;
@@ -33,7 +35,26 @@ public class PlayMusicActivity extends YouTubeBaseActivity {
             }
         });
 
-        ImageView button_back = findViewById(R.id.imageView_back); //누르면 노래 재생 화면
+        //노래추천 평가결과 DB로 연결시키기
+        ImageButton imageButton_good = findViewById(R.id.imageButton_good);
+        imageButton_good.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(getApplicationContext(), HomeActivity.class);
+                startActivityForResult(intent,0);
+            }
+        });
+        ImageButton imageButton_bad = findViewById(R.id.imageButton_bad);
+        imageButton_bad.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(getApplicationContext(), HomeActivity.class);
+                startActivityForResult(intent,0);
+            }
+        });
+
+        //누르면 노래 재생 화면 추가시키기
+        ImageView button_back = findViewById(R.id.imageView_back);
     }
 
     public void initPlayer(){

@@ -41,13 +41,13 @@ class HomeActivity : AppCompatActivity() {
         //날씨, 시간
         weatherTask().execute()
 
-        button_home.setOnClickListener{
+        imageButton_home.setOnClickListener{
             startActivity<HomeActivity>()
         }
-        button_popup.setOnClickListener {
+        imageButton_popup.setOnClickListener {
             startActivity<EmotionPopUpActivity>()
         }
-        button_mystudio.setOnClickListener {
+        imageButton_mystudio.setOnClickListener {
 //            startActivity<UserFeedActivity>()
         }
     }

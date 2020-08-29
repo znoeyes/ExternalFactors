@@ -13,11 +13,9 @@ import android.widget.Toast;
 import androidx.annotation.Nullable;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.constraintlayout.widget.ConstraintLayout;
-
 import java.sql.Timestamp;
 
 public class HeartRatePopUpActivity extends AppCompatActivity {
-
     //Heart rate detector member variables
     public static int hrtratebpm;
 
