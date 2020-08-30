@@ -35,24 +35,6 @@ public class PlayMusicVideoActivity extends YouTubeBaseActivity {
             }
         });
 
-        //노래추천 평가결과 DB로 연결시키기
-        ImageButton imageButton_good = findViewById(R.id.imageButton_good);
-        imageButton_good.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                Intent intent = new Intent(getApplicationContext(), HomeActivity.class);
-                startActivityForResult(intent,0);
-            }
-        });
-        ImageButton imageButton_bad = findViewById(R.id.imageButton_bad);
-        imageButton_bad.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                Intent intent = new Intent(getApplicationContext(), HomeActivity.class);
-                startActivityForResult(intent,0);
-            }
-        });
-
         //누르면 ViewMorePopup 연결시키기
         ImageView button_back = findViewById(R.id.imageView_back);
 //        button_back.setOnClickListener(new View.OnClickListener() {

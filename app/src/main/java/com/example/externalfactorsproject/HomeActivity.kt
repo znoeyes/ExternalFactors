@@ -46,15 +46,19 @@ class HomeActivity : AppCompatActivity() {
 
         imageButton_home.setOnClickListener{
             startActivity<HomeActivity>()
+            finish()
         }
         imageButton_popup.setOnClickListener {
             startActivity<EmotionPopUpActivity>()
         }
         imageButton_mystudio.setOnClickListener {
 //            startActivity<UserFeedActivity>()
+//            finish()
         }
     }
 
+
+    //<위치>
     //마지막으로 알려진 위치 가져오기
     @SuppressLint("MissingPermission")
     private fun getLastLocation(){
@@ -134,12 +138,13 @@ class HomeActivity : AppCompatActivity() {
             var lastLocation: Location = locationResult.lastLocation
 //            findViewById<TextView>(R.id.latTextView).text = lastLocation.latitude.toString()
 //            findViewById<TextView>(R.id.lonTextView).text = lastLocation.longitude.toString()
-            LAT = lastLocation.latitude.toString()
-            LON = lastLocation.longitude.toString()
+//            LAT = lastLocation.latitude.toString()
+//            LON = lastLocation.longitude.toString()
         }
     }
 
 
+    //<날씨>
     //AsyncTask 클래스 - UI와 즉각적 상호작용
     inner class weatherTask() : AsyncTask<String, Void, String>() {
 
@@ -195,6 +200,7 @@ class HomeActivity : AppCompatActivity() {
             }
         }
     }
+
 
     //NOW 이미지뷰 투명도 애니메이션
     private fun animateNOW(){

@@ -63,6 +63,7 @@ public class HeartRatePopUpActivity extends AppCompatActivity {
             public void onClick(View v) {
                 Intent intent = new Intent(getApplicationContext(), PlayMusicVideoActivity.class);
                 startActivityForResult(intent,0);
+                finish();
             }
         });
     }
